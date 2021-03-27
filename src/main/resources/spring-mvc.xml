@@ -7,6 +7,7 @@
        http://www.springframework.org/schema/mvc
        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    
     <!--mvc注解支持-->
     <mvc:annotation-driven>
         <mvc:message-converters>

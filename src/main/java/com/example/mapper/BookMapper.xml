@@ -5,13 +5,16 @@
     <select id="queryAllBooks" resultType="Book">
         select * from `t_book`;
     </select>
+
     <delete id="deleteBookById">
         delete from `t_book` where `username` = #{username};
     </delete>
+
     <insert id="addBook" parameterType="Book">
         insert into `t_book` (`bookName`,`price`,`bookType`,`bookNums`)
         values (#{bookName},#{price},#{bookType},#{bookNums});
     </insert>
+
     <select id="queryBookByName" resultType="Book">
         select * from `t_book` where `bookName` = #{bookName};
     </select>

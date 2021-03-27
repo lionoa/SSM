@@ -20,5 +20,6 @@ public class ServiceLog {
         Date after = new Date();
         System.out.println(ft.format(after) + "方法：" + methodName + "执行结束");
         return o;
+
     }
 }

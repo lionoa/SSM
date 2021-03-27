@@ -34,7 +34,7 @@ public class DoController {
         List<Book> books = bookService.queryAllBooks();
         return JSONObject.toJSONString(books);
     }
-
+    
     @PostMapping("/delete")
     public String delete(@RequestParam("bookName") String bookName) {
         System.out.println("删除的书籍为：" + bookName);

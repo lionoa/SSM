@@ -22,6 +22,7 @@ $.ajax({
         console.log("没有session");
     }
 });
+
 const a = document.getElementById("logoutHref");
 function aHref(){
     $.ajax({
