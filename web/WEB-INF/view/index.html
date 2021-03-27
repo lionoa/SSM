@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv=Content-Type content="text/html;charset=utf-8" charset="UTF-8">
+    <title>书城首页</title>
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<ul class="menu">
+    <li id="logo"><a href="http://localhost:8080/">图书管理系统</a></li>
+    <li><a href="http://localhost:8080/books">所有书籍</a></li>
+    <li><a href="http://localhost:8080/addBook" id="add"></a></li>
+    <li><a href="javascript:void(0)" id="update"></a></li>
+    <li><a href="javascript:void(0)" id="delete"></a></li>
+    <li id="login">
+        <a id="logoutHref" title="点击注销"></a>
+        <a id="loginHref" href="http://localhost:8080/login">登录</a>
+    </li>
+</ul>
+<article class="clock">
+    <div class="hours-container">
+        <div class="hours"></div>
+    </div>
+    <div class="minutes-container">
+        <div class="minutes"></div>
+    </div>
+    <div class="seconds-container">
+        <div class="seconds"></div>
+    </div>
+</article>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除书籍</title>
+    <link href="../css/delete.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div class="deleteDiv">
+        <form method="post" action="http://localhost:8080/delete">
+            <label for="deleteInput"></label>
+            <input id="deleteInput" type="text" placeholder="书名" autocomplete="off" name="bookName">
+            <input type="button" id="deleteBtn" value="提交">
+        </form>
+    </div>
+</body>
+</html>

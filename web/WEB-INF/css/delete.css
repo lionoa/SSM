@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    outline: none;
+}
+.deleteDiv{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #cbafaf;
+    text-align: center;
+}
+
+.deleteDiv input{
+    width: 70%;
+    height: 35px;
+}
+#deleteBtn{
+    width: 50%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link href="../css/login.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<form action="http://localhost:8080/doLogin" method="post">
+    <h1 class="tt">LOGIN</h1>
+    <label>
+        <input id="username" type="text" placeholder="用户名" name="username" autocomplete="off">
+    </label>
+    <label>
+        <input id="password" type="password" placeholder="密码" name="password">
+    </label>
+    <input id="BTN" type="button" class="btn tt" value="LOGIN">
+</form>
+<script type="text/javascript">
+    const elementById = document.getElementById("BTN");
+    function btn(){
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        $.ajax({
+            url:'/doLogin',
+            type:'POST',
+            dataType:'json',
+            data:{"username":username,"password":password},
+            success:function (data){
+                if (data === 1) {
+                    /*跳转到index*/
+                    location.href="http://localhost:8080/";
+                }
+                if (data === 0) {
+                    /*回到本页面*/
+                    alert("用户名或密码错误，请重新输入");
+                    location.reload();
+                }
+            },
+            error:function (){
+                console.log("失败");
+            }
+        })
+    }
+    elementById.onclick = btn;
+</script>
+</body>
+</html>

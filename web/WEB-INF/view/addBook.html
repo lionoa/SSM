@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍添加</title>
+    <link rel="stylesheet" type="text/css" href="../css/addBook.css">
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+
+<div id="center">
+    <form id="addBookForm" action="http://localhost:8080/add" method="post">
+        <h1>书籍添加页</h1>
+        <label for="bookName"></label>
+        <input class="bookInput" id="bookName" name="bookName" placeholder="书名" autocomplete="off">
+        <br/>
+        <label for="price"></label>
+        <input class="bookInput" id="price" name="price" placeholder="价格" type="number" autocomplete="off">
+        <br/>
+        <label for="bookType"></label>
+        <input class="bookInput" id="bookType" name="bookType" placeholder="书籍类型" autocomplete="off">
+        <br/>
+        <label for="bookNums"></label>
+        <input class="bookInput" id="bookNums" name="bookNums" placeholder="剩余数量" type="number" autocomplete="off">
+        <br/>
+        <input id="btn" type="button" value="提交" onclick="submitBtn()">
+    </form>
+</div>
+<script type="text/javascript" src="../js/addBook.js"></script>
+</body>
+</html>
