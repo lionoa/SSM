@@ -5,11 +5,14 @@
     <title>书籍页面</title>
     <link type="text/css" rel="stylesheet" href="../css/books.css">
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/books.js"></script>
+
 </head>
 <body>
 <h1>书籍页面</h1>
 <hr/>
+<div id="tip">
+    <p>如何使用修改、删除功能：勾选要进行操作的图书，点击对应功能的按钮即可。（一次只允许勾选一本图书）</p>
+</div>
 <div id="tableDiv">
     <table id="table">
         <thead>
@@ -35,9 +38,9 @@
     </table>
 </div>
 
-<input class="btn" type="button" value="删除">
-<input class="btn" type="button" value="修改">
+<input id="deleteBTN" class="btn" type="button" value="删除">
+<input id="updateBTN" class="btn" type="button" value="修改">
 
-
+<script type="text/javascript" src="../js/books.js"></script>
 </body>
 </html>

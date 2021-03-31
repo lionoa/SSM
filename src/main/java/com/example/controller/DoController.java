@@ -36,9 +36,9 @@ public class DoController {
     }
     
     @PostMapping("/delete")
-    public String delete(@RequestParam("bookName") String bookName) {
-        System.out.println("删除的书籍为：" + bookName);
-        int result = bookService.deleteBookByName(bookName);
+    public String delete(@RequestParam("id") int id) {
+        System.out.println("删除的书籍为：" + id);
+        int result = bookService.deleteBookById(id);
         System.out.println("删除结果为：" + result);
         return String.valueOf(result);
     }

@@ -7,7 +7,7 @@ import java.util.List;
 public interface BookDao {
 
     List<Book> queryAllBooks();
-    int deleteBookByName(String username);
+    int deleteBookById(int id);
     int addBook(Book book);
     Book queryBookByName(String bookName);
 }

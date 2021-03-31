@@ -24,9 +24,9 @@ public class BookDaoImpl implements BookDao{
     }
 
     @Override
-    public int deleteBookByName(String username) {
+    public int deleteBookById(int id) {
         BookDao bookDao = sqlSessionTemplate.getMapper(BookDao.class);
-        return bookDao.deleteBookByName(username);
+        return bookDao.deleteBookById(id);
     }
 
     @Override

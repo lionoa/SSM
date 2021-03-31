@@ -23,8 +23,8 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public int deleteBookByName(String  username) {
-        return bookDao.deleteBookByName(username);
+    public int deleteBookById(int  id) {
+        return bookDao.deleteBookById(id);
     }
 
     @Override

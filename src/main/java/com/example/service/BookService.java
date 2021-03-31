@@ -7,7 +7,7 @@ import java.util.List;
 public interface BookService {
 
     List<Book> queryAllBooks();
-    int deleteBookByName(String  username);
+    int deleteBookById(int  id);
     int addBook(Book book);
     boolean isHasBookByName(String bookName);
 }

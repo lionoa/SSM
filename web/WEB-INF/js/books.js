@@ -13,8 +13,8 @@ $.ajax({
                     "</td><td>" + data[i].price +
                     "</td><td>" + data[i].bookType +
                     "</td><td>" + data[i].bookNums +
-                    "</td><td><input type='checkbox' id='check'>" +
-                    "</td></tr>"
+                    "</td><td><input type='checkbox' id=" + data[i].id +
+                    "></td></tr>"
             }
             $("#books").html(str);
         }
@@ -24,3 +24,38 @@ $.ajax({
     }
 
 });
+
+function checkedID() {
+    const length = $("input[type='checkbox']:checked").length;
+    console.log(length);
+    if (length === 0) {alert("请先勾选要操作的书籍");return;}
+    if (length > 1) {alert("只能勾选一本书");}
+}
+function getID(){
+    //获取书籍id
+    const val = $('input:checkbox:checked').attr('id');
+    console.log(val);
+    return val;
+}
+function Func(url,id){
+    $.ajax({
+        url:url,
+        data:{'id':id},
+        dataType:'json',
+        type:'POST',
+        success:function (data){
+            console.log(data);
+            location.reload();
+        },
+        error:function (){
+            console.log("error");
+        }
+    })
+}
+const BTN = document.getElementById("deleteBTN");
+BTN.onclick = function (){
+    checkedID();
+    const url = "/delete";
+    Func(url,getID());
+};
+

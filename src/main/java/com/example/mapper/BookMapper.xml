@@ -7,7 +7,7 @@
     </select>
 
     <delete id="deleteBookById">
-        delete from `t_book` where `username` = #{username};
+        delete from `t_book` where `id` = #{id};
     </delete>
 
     <insert id="addBook" parameterType="Book">
