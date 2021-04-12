@@ -1,4 +1,15 @@
 $.ajax({
+    url:'/Session',
+    dataType:'text',
+    type:'GET',
+    success:function (data){
+        if (data === "") {
+            $('#deleteBTN').hide();
+            $('#updateBTN').hide();
+        }
+    }
+})
+$.ajax({
     url: '/select',
     dataType: 'json',
     type: "GET",
@@ -61,9 +72,15 @@ function Func(url, id) {
 }
 
 const BTN = document.getElementById("deleteBTN");
+const upBtn = document.getElementById('updateBTN');
 BTN.onclick = function () {
     checkedID();
     const url = "/delete";
+    Func(url, getID());
+};
+upBtn.onclick = function () {
+    checkedID();
+    const url = "/update";
     Func(url, getID());
 };
 

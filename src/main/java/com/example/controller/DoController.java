@@ -79,4 +79,12 @@ public class DoController {
         session.removeAttribute("username");
         return "1";
     }
+
+    @PostMapping("/update")
+    public String update(Book book)  {
+        System.out.println("修改后的书籍信息为：" + book.toString());
+        int result = bookService.updateBook(book);
+        System.out.println("修改结果为：" + result);
+        return String.valueOf(result);
+    }
 }

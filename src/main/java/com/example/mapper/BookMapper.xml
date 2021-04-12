@@ -18,4 +18,16 @@
     <select id="queryBookByName" resultType="Book">
         select * from `t_book` where `bookName` = #{bookName};
     </select>
+
+    <update id="updateBook" parameterType="Book">
+        update
+            `t_book`
+        set
+            `bookName` = #{bookName},
+            `price` = #{price},
+            `bookType` = #{bookType},
+            `bookNums` = #{bookNums}
+        where
+            `id` = #{id};
+    </update>
 </mapper>

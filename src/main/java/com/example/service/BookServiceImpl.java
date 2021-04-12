@@ -37,4 +37,9 @@ public class BookServiceImpl implements BookService{
         Book book = bookDao.queryBookByName(bookName);
         return book != null;
     }
+
+    @Override
+    public int updateBook(Book book) {
+        return bookDao.updateBook(book);
+    }
 }

@@ -10,4 +10,5 @@ public interface BookService {
     int deleteBookById(int  id);
     int addBook(Book book);
     boolean isHasBookByName(String bookName);
+    int updateBook(Book book);
 }
