@@ -6,6 +6,10 @@
         select * from `t_book`;
     </select>
 
+    <select id="queryBookById" resultType="Book">
+        select * from `t_book` where `id` = #{id};
+    </select>
+
     <delete id="deleteBookById">
         delete from `t_book` where `id` = #{id};
     </delete>

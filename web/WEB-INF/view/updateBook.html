@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改书籍</title>
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <link href="../css//updateBook.css" rel="stylesheet">
+</head>
+<body>
+<div class="tt">
+    <form action="http://localhost:8080/update" method="post">
+        <h1>修改书籍</h1>
+        <input id="id" type="text" placeholder="书籍编号" readonly="readonly">
+        <input id="bookName" type="text" placeholder="书名">
+        <input id="price" type="number" placeholder="价格">
+        <input id="bookType" type="text" placeholder="书籍类型">
+        <input id="bookNums" type="number" placeholder="书籍数量">
+        <input id="updateBTN" type="button" value="提交" onclick="updateFunc()">
+    </form>
+</div>
+<script type="text/javascript" src="../js/updateBook.js"></script>
+</body>
+</html>

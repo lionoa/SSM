@@ -46,4 +46,10 @@ public class BookDaoImpl implements BookDao{
         BookDao bookDao = sqlSessionTemplate.getMapper(BookDao.class);
         return bookDao.updateBook(book);
     }
+
+    @Override
+    public Book queryBookById(int id) {
+        BookDao bookDao = sqlSessionTemplate.getMapper(BookDao.class);
+        return bookDao.queryBookById(id);
+    }
 }

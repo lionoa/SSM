@@ -33,13 +33,18 @@ public class BookServiceImpl implements BookService{
     }
 
     @Override
-    public boolean isHasBookByName(String bookName) {
-        Book book = bookDao.queryBookByName(bookName);
-        return book != null;
+    public int updateBook(Book book) {
+        return bookDao.updateBook(book);
     }
 
     @Override
-    public int updateBook(Book book) {
-        return bookDao.updateBook(book);
+    public Book queryBookById(int id) {
+        return bookDao.queryBookById(id);
+    }
+
+    @Override
+    public boolean isHasBookByName(String bookName) {
+        Book book = bookDao.queryBookByName(bookName);
+        return book != null;
     }
 }

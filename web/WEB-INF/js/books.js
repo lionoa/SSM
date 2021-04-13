@@ -38,6 +38,7 @@ $.ajax({
 
 function checkedID() {
     const length = $("input[type='checkbox']:checked").length;
+    console.log("书籍数量")
     console.log(length);
     if (length === 0) {
         alert("请先勾选要操作的书籍");
@@ -51,18 +52,18 @@ function checkedID() {
 function getID() {
     //获取书籍id
     const val = $('input:checkbox:checked').attr('id');
+    console.log("当前书籍id");
     console.log(val);
     return val;
 }
 
-function Func(url, id) {
+function deleteFun(id) {
     $.ajax({
-        url: url,
+        url: '/delete',
         data: {'id': id},
         dataType: 'json',
         type: 'POST',
-        success: function (data) {
-            console.log(data);
+        success: function () {
             location.reload();
         },
         error: function () {
@@ -75,12 +76,9 @@ const BTN = document.getElementById("deleteBTN");
 const upBtn = document.getElementById('updateBTN');
 BTN.onclick = function () {
     checkedID();
-    const url = "/delete";
-    Func(url, getID());
+    deleteFun(getID());
 };
 upBtn.onclick = function () {
-    checkedID();
-    const url = "/update";
-    Func(url, getID());
+    location.href = "/updatedId/" + getID();
 };
 

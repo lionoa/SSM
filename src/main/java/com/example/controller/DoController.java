@@ -80,11 +80,23 @@ public class DoController {
         return "1";
     }
 
+
+    @PostMapping("/updatedBook")
+    public String updateBook(@RequestParam("id") int id) {
+        Book book;
+        if (id != -1) {
+            book = bookService.queryBookById(id);
+            System.out.println(book.toString());
+            return JSONObject.toJSONString(book);
+        }
+        return "0";
+    }
+
     @PostMapping("/update")
-    public String update(Book book)  {
-        System.out.println("修改后的书籍信息为：" + book.toString());
+    public String update(Book book){
+        System.out.println("修改后的书籍为："+book.toString());
         int result = bookService.updateBook(book);
-        System.out.println("修改结果为：" + result);
+        System.out.println("修改结果："+result);
         return String.valueOf(result);
     }
 }

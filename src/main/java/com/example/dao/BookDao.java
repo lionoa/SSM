@@ -10,5 +10,6 @@ public interface BookDao {
     int deleteBookById(int id);
     int addBook(Book book);
     Book queryBookByName(String bookName);
+    Book queryBookById(int id);
     int updateBook(Book book);
 }
